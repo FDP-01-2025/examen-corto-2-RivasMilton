@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
 
-int main ()
+int main()
 {
     cout << "==============================================================" << endl;
-    cout << "Ingrese por favor ingrese su edad para determiminar una talla" << endl;
+    cout << "Ingrese por favor ingrese su edad para determinar una talla" << endl;
 
     int talla = 0;
     char genero;
@@ -12,1104 +12,333 @@ int main ()
     char compra2;
     char compra3;
 
-    //saldo disponible del usuario
+    // saldo disponible del usuario
     int saldo = 300;
 
-    //precios ropa masculina
+    // precios ropa masculina (sin descuento aplicado)
     int comprah1 = 130;
     int comprah2 = 90;
     int comprah3 = 900;
 
-    //precio ropa femenina
+    // precios ropa femenina (sin descuento aplicado)
     int compram1 = 80;
-    int coompram2 = 180;
+    int compram2 = 110;
+    int compram3 = 250;
 
-    //variable que guarda respuesta del usuario al comprar
+    // variable que guarda respuesta del usuario al comprar
     char ask;
 
+    // Leer la edad para determinar la talla
     cin >> talla;
 
+    // Determinar la talla
     if (talla <= 10)
     {
         cout << "==============================================================" << endl;
-        cout << "su talla es 8 segun su edad: " << talla << endl;
-        cout << "Por favor ingrese su genero (M, F o C): " << talla << endl;
-        cout << "Sus opciones son:  M: masculino, F: femenino y C: cualquiera" << endl;
-        cin >> genero;
-
-        switch (genero)
-        {
-            case 'M':
-            cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado genero masculino en la coleccion" << endl;
-            cout << "Para Hombre (descuento del 30%):" << endl;
-            cout << "==============================================================" << endl;
-            cout << "1 Pantalon Formal: $130 (descuento del 30%)." << endl;
-            cout << "2 Camisa Casual: $90 (descuento del 30%)." << endl;
-            cout << "3 Chaqueta Premium: $900 (descuento del 30%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
-            cin >> compra;
-            switch (compra)
-            {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah3 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "No tienes suficiente dinero para esta compra" << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
-            }
-            break;
-            case 'F':
-            cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado genero femenino en la coleccion" << endl;
-            cout << "Para Mujer (descuento del 20%):" << endl;
-            cout << "==============================================================" << endl;
-            cout << "1 Blusa Moderna: $80 (descuento del 20%)." << endl;
-            cout << "2 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "3 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
-            cin >> compra2;
-
-             switch (compra2)
-            {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << compram1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
-            }
-            break;
-            case 'C':
-            cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado cualquiera, podra ver todas las colecciones disponibles" << endl;
-            cout << "Para Hombre (descuento del 30%):" << endl;
-            cout << "==============================================================" << endl;
-            cout << "1 Pantalón Formal: $130 (descuento del 30%)." << endl;
-            cout << "2 Camisa Casual: $90 (descuento del 30%)." << endl;
-            cout << "3 Chaqueta Premium: $900 (descuento del 30%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "Para Mujer (descuento del 20%):";
-            cout << "==============================================================" << endl;
-            cout << "4 Blusa Moderna: $80 (descuento del 20%)." << endl;
-            cout << "5 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "6 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
-            cin >> compra;
-            switch (compra)
-            {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah3 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "No tienes suficiente dinero para esta compra" << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            case '4':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << compram1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '5':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '6':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
-            }
-            break;
-    
-        
-        default:
-        cout << "==============================================================" << endl;
-        cout << "Su opcion no es valida" << endl;
-        cout << "Sus opciones son:  M: masculino, F: femenino y C: cualquiera" << endl;
-         break;
-        }
+        cout << "Su talla es 8 segun su edad: " << talla << endl;
     }
-    else if(talla >= 11 && talla < 15)
+    else if (talla <= 15)
     {
         cout << "==============================================================" << endl;
-        cout << "su talla es: 12 segun su edad: " << talla << endl;
-        cout << "Por favor ingrese su genero (M, F o C): " << talla << endl;
-        cout << "Sus opciones son:  M: masculino, F: femenino y C: cualquiera" << endl;
-        cin >> genero;
-
-        switch (genero)
-        {
-            case 'M':
-            cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado genero masculino en la coleccion" << endl;
-            cout << "Para Hombre (descuento del 30%):" << endl;
-            cout << "==============================================================" << endl;
-            cout << "1 Pantalon Formal: $130 (descuento del 30%)." << endl;
-            cout << "2 Camisa Casual: $90 (descuento del 30%)." << endl;
-            cout << "3 Chaqueta Premium: $900 (descuento del 30%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
-            cin >> compra;
-            switch (compra)
-            {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah3 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "No tienes suficiente dinero para esta compra" << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
-            }
-            break;
-            case 'F':
-            cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado genero femenino en la coleccion" << endl;
-            cout << "Para Mujer (descuento del 20%):" << endl;
-            cout << "==============================================================" << endl;
-            cout << "1 Blusa Moderna: $80 (descuento del 20%)." << endl;
-            cout << "2 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "3 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
-            cin >> compra2;
-
-             switch (compra2)
-            {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << compram1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
-            }
-            break;
-            case 'C':
-            cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado cualquiera, podra ver todas las colecciones disponibles" << endl;
-            cout << "Para Hombre (descuento del 30%):" << endl;
-            cout << "==============================================================" << endl;
-            cout << "1 Pantalón Formal: $130 (descuento del 30%)." << endl;
-            cout << "2 Camisa Casual: $90 (descuento del 30%)." << endl;
-            cout << "3 Chaqueta Premium: $900 (descuento del 30%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "Para Mujer (descuento del 20%):";
-            cout << "==============================================================" << endl;
-            cout << "4 Blusa Moderna: $80 (descuento del 20%)." << endl;
-            cout << "5 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "6 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
-            cin >> compra;
-            switch (compra)
-            {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah3 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "No tienes suficiente dinero para esta compra" << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            case '4':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << compram1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '5':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '6':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
-            }
-            break;
-    
-        
-        default:
-        cout << "==============================================================" << endl;
-        cout << "Su opcion no es valida" << endl;
-        cout << "Sus opciones son:  M: masculino, F: femenino y C: cualquiera" << endl;
-         break;
-        }
+        cout << "Su talla es 12 segun su edad: " << talla << endl;
     }
-    else if (talla >= 16 && talla < 60)
+    else if (talla <= 60)
     {
         cout << "==============================================================" << endl;
-        cout << "su talla es 16 segun su edad: " << talla << endl;
-        cout << "Por favor ingrese su genero (M, F o C): " << talla << endl;
-        cout << "Sus opciones son:  M: masculino, F: femenino y C: cualquiera" << endl;
-        cin >> genero;
-
-        switch (genero)
-        {
-            case 'M':
-            cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado genero masculino en la coleccion" << endl;
-            cout << "Para Hombre (descuento del 30%):" << endl;
-            cout << "==============================================================" << endl;
-            cout << "1 Pantalon Formal: $130 (descuento del 30%)." << endl;
-            cout << "2 Camisa Casual: $90 (descuento del 30%)." << endl;
-            cout << "3 Chaqueta Premium: $900 (descuento del 30%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
-            cin >> compra;
-            switch (compra)
-            {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah3 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "No tienes suficiente dinero para esta compra" << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
-            }
-            break;
-            case 'F':
-            cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado genero femenino en la coleccion" << endl;
-            cout << "Para Mujer (descuento del 20%):" << endl;
-            cout << "==============================================================" << endl;
-            cout << "1 Blusa Moderna: $80 (descuento del 20%)." << endl;
-            cout << "2 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "3 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
-            cin >> compra2;
-
-             switch (compra2)
-            {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << compram1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
-            }
-            break;
-            case 'C':
-            cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado cualquiera, podra ver todas las colecciones disponibles" << endl;
-            cout << "Para Hombre (descuento del 30%):" << endl;
-            cout << "==============================================================" << endl;
-            cout << "1 Pantalón Formal: $130 (descuento del 30%)." << endl;
-            cout << "2 Camisa Casual: $90 (descuento del 30%)." << endl;
-            cout << "3 Chaqueta Premium: $900 (descuento del 30%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "Para Mujer (descuento del 20%):";
-            cout << "==============================================================" << endl;
-            cout << "4 Blusa Moderna: $80 (descuento del 20%)." << endl;
-            cout << "5 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "6 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
-            cin >> compra;
-            switch (compra)
-            {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah3 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "No tienes suficiente dinero para esta compra" << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            case '4':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << compram1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '5':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-
-                case '6':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
-            }
-            break;
-    
-        
-        default:
-        cout << "==============================================================" << endl;
-        cout << "Su opcion no es valida" << endl;
-        cout << "Sus opciones son:  M: masculino, F: femenino y C: cualquiera" << endl;
-         break;
-        }
+        cout << "Su talla es 16 segun su edad: " << talla << endl;
     }
-    else if (talla >= 61 && talla < 120)
+    else
     {
         cout << "==============================================================" << endl;
-        cout << "su talla es 18 segun su edad: " << talla << endl;
-        cout << "Por favor ingrese su genero (M, F o C): " << talla << endl;
-        cout << "Sus opciones son:  M: masculino, F: femenino y C: cualquiera" << endl;
-        cin >> genero;
+        cout << "Su talla es 18 segun su edad: " << talla << endl;
+    }
 
-        switch (genero)
-        {
-            case 'M':
+    cout << "Por favor ingrese su genero (M, F o C): " << endl;
+    cout << "M: Masculino, F: Femenino, C: Cualquiera" << endl;
+    cin >> genero;
+
+    // Selección del género y prendas disponibles
+    switch (genero)
+    {
+        case 'M':  // Ropa para hombre
             cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado genero masculino en la coleccion" << endl;
-            cout << "Para Hombre (descuento del 30%):" << endl;
+            cout << "Usted ha seleccionado el genero masculino. Las opciones son:" << endl;
+            cout << "1. Pantalon Formal: $130 (descuento del 30%)." << endl;
+            cout << "2. Camisa Casual: $90 (descuento del 30%)." << endl;
+            cout << "3. Chaqueta Premium: $900 (descuento del 30%)." << endl;
             cout << "==============================================================" << endl;
-            cout << "1 Pantalon Formal: $130 (descuento del 30%)." << endl;
-            cout << "2 Camisa Casual: $90 (descuento del 30%)." << endl;
-            cout << "3 Chaqueta Premium: $900 (descuento del 30%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
+            cout << "Ingrese el numero del producto que desea comprar: " << endl;
             cin >> compra;
             switch (compra)
             {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
+                case '1':
+                    cout << "==============================================================" << endl;
+                    cout << "El precio del Pantalon Formal con descuento es: " << comprah1 * 0.7 << endl;
+                    if (saldo >= comprah1 * 0.7) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= comprah1 * 0.7;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (comprah1 * 0.7 - saldo) << endl;
+                    }
+                    break;
+
                 case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
+                    cout << "==============================================================" << endl;
+                    cout << "El precio de la Camisa Casual con descuento es: " << comprah2 * 0.7 << endl;
+                    if (saldo >= comprah2 * 0.7) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= comprah2 * 0.7;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (comprah2 * 0.7 - saldo) << endl;
+                    }
+                    break;
 
                 case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah3 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "No tienes suficiente dinero para esta compra" << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
+                    cout << "==============================================================" << endl;
+                    cout << "El precio de la Chaqueta Premium con descuento es: " << comprah3 * 0.7 << endl;
+                    if (saldo >= comprah3 * 0.7) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= comprah3 * 0.7;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (comprah3 * 0.7 - saldo) << endl;
+                    }
+                    break;
+
+                default:
+                    cout << "Seleccion no valida." << endl;
+                    break;
             }
             break;
-            case 'F':
+
+        case 'F':  // Ropa para mujer
             cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado genero femenino en la coleccion" << endl;
-            cout << "Para Mujer (descuento del 20%):" << endl;
+            cout << "Usted ha seleccionado el genero femenino. Las opciones son:" << endl;
+            cout << "1. Blusa Moderna: $80 (descuento del 20%)." << endl;
+            cout << "2. Falda Elegante: $110 (descuento del 20%)." << endl;
+            cout << "3. Abrigo Premium: $250 (descuento del 20%)." << endl;
             cout << "==============================================================" << endl;
-            cout << "1 Blusa Moderna: $80 (descuento del 20%)." << endl;
-            cout << "2 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "3 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
+            cout << "Ingrese el numero del producto que desea comprar: " << endl;
             cin >> compra2;
-
-             switch (compra2)
+            switch (compra2)
             {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << compram1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
+                case '1':
+                    cout << "==============================================================" << endl;
+                    cout << "El precio de la Blusa Moderna con descuento es: " << compram1 * 0.8 << endl;
+                    if (saldo >= compram1 * 0.8) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= compram1 * 0.8;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (compram1 * 0.8 - saldo) << endl;
+                    }
+                    break;
+
                 case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
+                    cout << "==============================================================" << endl;
+                    cout << "El precio de la Falda Elegante con descuento es: " << compram2 * 0.8 << endl;
+                    if (saldo >= compram2 * 0.8) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= compram2 * 0.8;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (compram2 * 0.8 - saldo) << endl;
+                    }
+                    break;
 
                 case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
+                    cout << "==============================================================" << endl;
+                    cout << "El precio del Abrigo Premium con descuento es: " << compram3 * 0.8 << endl;
+                    if (saldo >= compram3 * 0.8) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= compram3 * 0.8;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (compram3 * 0.8 - saldo) << endl;
+                    }
+                    break;
+
+                default:
+                    cout << "Seleccion no valida." << endl;
+                    break;
             }
             break;
-            case 'C':
+
+        case 'C':  
             cout << "==============================================================" << endl;
-            cout << "Usted has seleccionado cualquiera, podra ver todas las colecciones disponibles" << endl;
+            cout << "Usted ha seleccionado cualquiera, podra ver todas las colecciones disponibles." << endl;
+            
+            // Mostrar todas las opciones combinadas de hombre y mujer
             cout << "Para Hombre (descuento del 30%):" << endl;
+            cout << "1. Pantalon Formal: $130 (descuento del 30%)." << endl;
+            cout << "2. Camisa Casual: $90 (descuento del 30%)." << endl;
+            cout << "3. Chaqueta Premium: $900 (descuento del 30%)." << endl;
             cout << "==============================================================" << endl;
-            cout << "1 Pantalón Formal: $130 (descuento del 30%)." << endl;
-            cout << "2 Camisa Casual: $90 (descuento del 30%)." << endl;
-            cout << "3 Chaqueta Premium: $900 (descuento del 30%)." << endl;
+            
+            cout << "Para Mujer (descuento del 20%):" << endl;
+            cout << "4. Blusa Moderna: $80 (descuento del 20%)." << endl;
+            cout << "5. Falda Elegante: $110 (descuento del 20%)." << endl;
+            cout << "6. Abrigo Premium: $250 (descuento del 20%)." << endl;
             cout << "==============================================================" << endl;
-            cout << "Para Mujer (descuento del 20%):";
-            cout << "==============================================================" << endl;
-            cout << "4 Blusa Moderna: $80 (descuento del 20%)." << endl;
-            cout << "5 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "6 Falda Elegante: $110 (descuento del 20%)." << endl;
-            cout << "==============================================================" << endl;
-            cout << "ingresa el numero del producto que quieres comprar" << endl;
+            
+            cout << "Ingrese el numero del producto que desea comprar: " << endl;
             cin >> compra;
+
+
             switch (compra)
             {
-            case '1':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '2':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
+                case '1': 
+                    cout << "==============================================================" << endl;
+                    cout << "El precio del Pantalon Formal con descuento es: " << comprah1 * 0.7 << endl;
+                    if (saldo >= comprah1 * 0.7) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= comprah1 * 0.7;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (comprah1 * 0.7 - saldo) << endl;
+                    }
+                    break;
 
-                case '3':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << comprah3 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "No tienes suficiente dinero para esta compra" << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            case '4':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << compram1 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-                case '5':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
+                case '2': 
+                    cout << "==============================================================" << endl;
+                    cout << "El precio de la Camisa Casual con descuento es: " << comprah2 * 0.7 << endl;
+                    if (saldo >= comprah2 * 0.7) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= comprah2 * 0.7;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (comprah2 * 0.7 - saldo) << endl;
+                    }
+                    break;
 
-                case '6':
-                cout << "==============================================================" << endl;
-                cout << "tu saldo de compra es de: $300" << endl;
-                cout << "usted esta llevando un producto con el valor de: " << coompram2 << endl;
-                cout << "desea realizar la compra? y/n" << endl;
-                cin >> ask;
-                if (ask == 'y')
-                {
-                    cout << "tu compra se realizo con exito tu cambio es de: " << endl;
-                    exit;
-                }
-                else 
-                {
-                    cout << "No se realizo tu compra, lastima" << endl;
-                }
-            break;
-            
-            default:
-            cout << "Selecciona un numero valido" << endl;
-                break;
+                case '3': 
+                    cout << "==============================================================" << endl;
+                    cout << "El precio de la Chaqueta Premium con descuento es: " << comprah3 * 0.7 << endl;
+                    if (saldo >= comprah3 * 0.7) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= comprah3 * 0.7;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (comprah3 * 0.7 - saldo) << endl;
+                    }
+                    break;
+
+                case '4': 
+                    cout << "==============================================================" << endl;
+                    cout << "El precio de la Blusa Moderna con descuento es: " << compram1 * 0.8 << endl;
+                    if (saldo >= compram1 * 0.8) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= compram1 * 0.8;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (compram1 * 0.8 - saldo) << endl;
+                    }
+                    break;
+
+                case '5': 
+                    cout << "==============================================================" << endl;
+                    cout << "El precio de la Falda Elegante con descuento es: " << compram2 * 0.8 << endl;
+                    if (saldo >= compram2 * 0.8) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= compram2 * 0.8;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (compram2 * 0.8 - saldo) << endl;
+                    }
+                    break;
+
+                case '6': 
+                    cout << "==============================================================" << endl;
+                    cout << "El precio del Abrigo Premium con descuento es: " << compram3 * 0.8 << endl;
+                    if (saldo >= compram3 * 0.8) {
+                        cout << "Desea realizar la compra? (y/n): ";
+                        cin >> ask;
+                        if (ask == 'y') {
+                            saldo -= compram3 * 0.8;
+                            cout << "Compra exitosa. Su saldo restante es: $" << saldo << endl;
+                        }
+                        else {
+                            cout << "No se realizo la compra." << endl;
+                        }
+                    } else {
+                        cout << "No tiene suficiente dinero. Le faltan: $" << (compram3 * 0.8 - saldo) << endl;
+                    }
+                    break;
             }
             break;
-    
-        
+
         default:
-        cout << "==============================================================" << endl;
-        cout << "Su opcion no es valida" << endl;
-        cout << "Sus opciones son:  M: masculino, F: femenino y C: cualquiera" << endl;
-         break;
-        }
+            cout << "Seleccion no valida." << endl;
+            break;
     }
 
     return 0;
-
 }
