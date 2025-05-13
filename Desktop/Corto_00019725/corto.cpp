@@ -69,7 +69,7 @@ int main()
             cout << "==============================================================" << endl;
             cout << "Ingrese el numero del producto que desea comprar: " << endl;
             cin >> compra;
-            switch (compra)
+            switch (compra) //switch de compra del usuario
             {
                 case '1':
                     cout << "==============================================================" << endl;
